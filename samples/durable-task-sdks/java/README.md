@@ -42,6 +42,7 @@ Each sample demonstrates a different orchestration pattern:
 - **monitoring**: Monitoring and tracking orchestration progress
 - **sub-orchestrations**: Composing multiple orchestrations hierarchically
 - **entities**: Stateful entities that maintain state across operations (counter example)
+- **history-export**: Exporting terminal orchestration history from Durable Task Scheduler to Azure Blob Storage
 
 ## Running the Samples
 
@@ -82,6 +83,10 @@ cd sub-orchestrations
 # For entities sample
 cd entities
 ./gradlew runEntitiesPattern
+
+# For history export sample
+cd history-export
+./gradlew run
 ```
 
 ## Testing 

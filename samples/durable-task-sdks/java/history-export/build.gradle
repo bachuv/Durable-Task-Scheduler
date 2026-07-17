@@ -1,0 +1,39 @@
+plugins {
+    id 'java'
+    id 'application'
+}
+
+group 'io.durabletask'
+version = '0.1.0'
+
+java {
+    sourceCompatibility = JavaVersion.VERSION_21
+    targetCompatibility = JavaVersion.VERSION_21
+}
+
+def durableTaskVersion = '1.10.0'
+def grpcVersion = '1.82.1'
+
+repositories {
+    mavenLocal()
+    mavenCentral()
+}
+
+application {
+    mainClass = 'io.durabletask.samples.HistoryExportSample'
+}
+
+tasks.named('run') {
+    systemProperty 'java.util.logging.SimpleFormatter.format', '%4$s: %5$s%6$s%n'
+}
+
+dependencies {
+    implementation("com.microsoft:durabletask-client:${durableTaskVersion}")
+    implementation("com.microsoft:durabletask-azuremanaged:${durableTaskVersion}")
+    implementation("com.microsoft:durabletask-exporthistory:${durableTaskVersion}")
+
+    implementation "io.grpc:grpc-protobuf:${grpcVersion}"
+    implementation "io.grpc:grpc-stub:${grpcVersion}"
+    runtimeOnly "io.grpc:grpc-netty-shaded:${grpcVersion}"
+    runtimeOnly 'org.slf4j:slf4j-simple:1.7.36'
+}

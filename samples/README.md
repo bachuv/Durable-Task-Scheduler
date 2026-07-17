@@ -43,7 +43,7 @@ A quick-reference matrix showing which patterns are available in each language a
 | AI Agent Chaining | [✅](./durable-task-sdks/dotnet/Agents/PromptChaining) | | | |
 | AI Research Agent | | [✅](./durable-task-sdks/python/arXiv_research_agent) | | |
 | Large Payload | [✅](./durable-task-sdks/dotnet/LargePayload) | | | |
-| Export History | [✅](./durable-task-sdks/dotnet/ExportHistoryWebApp) | [✅](./durable-task-sdks/python/history-export) | | |
+| Export History | [✅](./durable-task-sdks/dotnet/ExportHistoryWebApp) | [✅](./durable-task-sdks/python/history-export) | [✅](./durable-task-sdks/java/history-export) | |
 | Bounded Coordinator | [✅](./durable-task-sdks/dotnet/BoundedCoordinator) | [✅](./durable-task-sdks/python/bounded-coordinator) | | |
 
 ### Durable Functions
